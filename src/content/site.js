@@ -39,26 +39,31 @@
       title: 'Cleaner & Hygiene Support',
       description: 'Event cleaning crew for before, during, and after service hygiene.',
       icon: '🧼',
+      image: '/portfolio-6-cleaning.jpg',
     },
     {
       title: 'Barmen, Barback & Baristas',
       description: 'Beverage teams for bars, coffee stations, and drink service flow.',
       icon: '🍸',
+      image: '/luxury-event-dubai.jpg',
     },
     {
       title: 'Host & Hostess',
       description: 'Front-of-house greeting, guest guidance, and entry coordination.',
       icon: '🎟️',
+      image: '/portfolio-5-venues.jpg',
     },
     {
       title: 'Cashier & Order Taker',
       description: 'Order taking, POS handling, queue control, and guest support.',
       icon: '🧾',
+      image: '/portfolio-2-corporate.jpg',
     },
     {
       title: 'Waiter & Waitresses',
       description: 'Table service, tray service, and banquet floor staffing.',
       icon: '🍽️',
+      image: '/waiter-team-photo.svg',
     },
   ],
 
