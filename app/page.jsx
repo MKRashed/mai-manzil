@@ -98,9 +98,9 @@ export default function HomePage() {
         <section id="stats" className="py-20 bg-[#f0ebe5]">
           <Container>
             <SectionHeading
-              eyebrow="Highlights"
-              title="Trusted across Bangladesh and beyond"
-              description="Built on refined craftsmanship and loyal partnerships."
+              eyebrow={site.statsSection.eyebrow}
+              title={site.statsSection.title}
+              description={site.statsSection.description}
             />
             <div className="mt-12">
               <Stats items={site.stats} />
@@ -133,8 +133,8 @@ export default function HomePage() {
               <div>
                 <SectionHeading
                   eyebrow="Contact"
-                  title="Let’s craft your next milestone"
-                  description="Share your vision and our team will respond with a tailored proposal."
+                  title={site.contact.headline}
+                  description={site.contact.description}
                 />
                 <div className="mt-8 space-y-3 text-sm text-[#5c554f]">
                   <p>{site.contact.location}</p>
@@ -144,13 +144,13 @@ export default function HomePage() {
               </div>
               <Reveal className="rounded-3xl border border-[#e2d7cb] bg-white p-6 shadow-[0_18px_50px_rgba(30,27,24,0.1)]">
                 <p className="text-sm text-[#5c554f]">
-                  Prefer a quick start? Use our full contact form and we will follow up within two business days.
+                  {site.contact.cardNote}
                 </p>
                 <Link
                   href="/contact"
                   className="mt-6 inline-flex rounded-full bg-[#1e1b18] px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#f7f4f0]"
                 >
-                  Go to Contact
+                  {site.contact.ctaLabel}
                 </Link>
               </Reveal>
             </div>

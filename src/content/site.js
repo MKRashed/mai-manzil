@@ -155,6 +155,11 @@
     { value: '98%', label: 'Client Retention' },
     { value: '8', label: 'Years in Staffing' },
   ],
+  statsSection: {
+    eyebrow: 'Highlights',
+    title: 'Trusted across the UAE and beyond',
+    description: 'Built on disciplined staffing and long-term client partnerships.',
+  },
 
   clients: ['Ardor Studio', 'Lumina Hotels', 'Citrine Labs', 'Maison Verity', 'Monarch Group'],
   venues: ['The Orchid Villa', 'Skyline Pavilion', 'The Atrium', 'Lotus Courtyard'],
@@ -244,6 +249,10 @@
     email: 'info@maimonzil.com',
     location: 'Dubai, United Arab Emirates',
     hours: 'Sun–Thu: 9:00 AM – 7:00 PM',
+    headline: 'Let’s staff your next event',
+    description: 'Share your requirements and our team will respond with a tailored crew plan.',
+    cardNote: 'Prefer a quick start? Use our full contact form and we will follow up within two business days.',
+    ctaLabel: 'Go to Contact',
     socials: [
       { label: 'Facebook', href: 'https://facebook.com' },
       { label: 'Instagram', href: 'https://instagram.com' },
