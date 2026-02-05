@@ -1,0 +1,64 @@
+﻿@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  --surface: #f7f4f0;
+  --surface-muted: #f0ebe5;
+  --ink: #1e1b18;
+  --ink-soft: #5c554f;
+  --accent: #b08a5a;
+  --accent-soft: #dcc3a0;
+  --border: #e2d7cb;
+  --shadow: 0 20px 60px rgba(30, 27, 24, 0.12);
+  --radius: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body), 'Inter', system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), 'Playfair Display', 'Times New Roman', serif;
+  color: var(--ink);
+}
+
+::selection {
+  background: rgba(176, 138, 90, 0.25);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+  a {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b08a5a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f7f4f0];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
