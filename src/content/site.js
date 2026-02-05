@@ -1,7 +1,7 @@
 ﻿export const site = {
   brand: {
     name: 'Mai Manzil',
-    domain: 'maimonzil.com',
+    domain: 'maimanzil.com',
     title: 'Mai Manzil — Event Worker Supply (Dubai)',
     tagline: 'Reliable event staffing, on demand',
     description:
@@ -35,36 +35,46 @@
   ],
 
   services: [
+
+    {
+      title: 'Waiter & Waitresses',
+      description: 'Table service, tray service, and banquet floor staffing.',
+      icon: '🍽️',
+      image: '/waiter-team-photo.png',
+    },
+   
+    {
+      title: 'Barmen & Barback',
+      description: 'Beverage teams for bars, coffee stations, and drink service flow.',
+      icon: '🍸',
+      image: '/barmen-barback.png',
+    },
+    {
+      title: 'Baristas',
+      description: 'Beverage teams for bars, coffee stations, and drink service flow.',
+      icon: '🍸',
+      image: '/baristas.png',
+    },
+    {
+      title: 'Host & Hostess',
+      description: 'Front-of-house greeting, guest guidance, and entry coordination.',
+      icon: '🎟️',
+      image: '/host-hostess.png',
+    },
+    {
+      title: 'Cashier & Order Taker',
+      description: 'Order taking, POS handling, queue control, and guest support.',
+      icon: '🧾',
+      image: '/cashier-order-taker.png',
+    },
+
     {
       title: 'Cleaner & Hygiene Support',
       description: 'Event cleaning crew for before, during, and after service hygiene.',
       icon: '🧼',
       image: '/portfolio-6-cleaning.jpg',
     },
-    {
-      title: 'Barmen, Barback & Baristas',
-      description: 'Beverage teams for bars, coffee stations, and drink service flow.',
-      icon: '🍸',
-      image: '/luxury-event-dubai.jpg',
-    },
-    {
-      title: 'Host & Hostess',
-      description: 'Front-of-house greeting, guest guidance, and entry coordination.',
-      icon: '🎟️',
-      image: '/portfolio-5-venues.jpg',
-    },
-    {
-      title: 'Cashier & Order Taker',
-      description: 'Order taking, POS handling, queue control, and guest support.',
-      icon: '🧾',
-      image: '/portfolio-2-corporate.jpg',
-    },
-    {
-      title: 'Waiter & Waitresses',
-      description: 'Table service, tray service, and banquet floor staffing.',
-      icon: '🍽️',
-      image: '/waiter-team-photo.svg',
-    },
+    
   ],
 
   featuredWork: [
@@ -249,9 +259,9 @@
   },
 
   contact: {
-    phone: '+971 50 000 0000',
+    phone: '+971501199583\n+971555569301',
     whatsapp: 'https://wa.me/971000000000',
-    email: 'info@maimonzil.com',
+    email: 'info@maimanzil.com',
     location: 'Dubai, United Arab Emirates',
     hours: 'Sun–Thu: 9:00 AM – 7:00 PM',
     headline: 'Let’s staff your next event',
