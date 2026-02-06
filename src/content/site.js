@@ -44,14 +44,14 @@
     },
    
     {
-      title: 'Barmen & Barback',
-      description: 'Beverage teams for bars, coffee stations, and drink service flow.',
+      title: 'Bartender & Barback',
+      description: 'Beverage teams for bars, and drink service flow.',
       icon: '🍸',
       image: '/barmen-barback.png',
     },
     {
       title: 'Baristas',
-      description: 'Beverage teams for bars, coffee stations, and drink service flow.',
+      description: 'Beverage teams for coffee stations, and drink service flow.',
       icon: '🍸',
       image: '/baristas.png',
     },
