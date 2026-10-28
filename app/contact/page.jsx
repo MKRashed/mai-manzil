@@ -50,8 +50,9 @@ export default function ContactPage() {
             <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
               <div>
                 <SectionHeading
+                  as="h1"
                   eyebrow="Contact"
-                  title="Discuss your staffing requirements"
+                  title="Contact Mai Manzil for staffing in Dubai"
                   description="Share the roles, headcount, location, dates, shift hours, and responsibilities required for your assignment."
                 />
                 <div className="mt-8 space-y-4 text-sm text-[#5c554f]">
@@ -142,11 +143,45 @@ export default function ContactPage() {
                 >
                   Send Inquiry
                 </button>
+                <p className="mt-4 text-xs leading-relaxed text-[#5c554f]">
+                  This form opens your email application with your enquiry prepared. Review the details and send the email to share your request with Mai Manzil.
+                </p>
                 {submitted ? (
                   <p className="mt-4 text-xs text-[#5c554f]">Thank you. Your email client should open shortly.</p>
                 ) : null}
               </form>
             </div>
+            <section aria-labelledby="request-guide-title" className="mt-16 border-t border-[#e2d7cb] pt-10">
+              <h2 id="request-guide-title" className="text-2xl font-semibold sm:text-3xl">What to include in your staffing request</h2>
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#5c554f]">
+                A clear brief helps us understand your operation and discuss a suitable staffing plan. Use the message field to describe the assignment, or include these details in your email when requesting hospitality, housekeeping or event personnel in Dubai.
+              </p>
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                {[
+                  {
+                    title: 'Roles and team size',
+                    body: 'Tell us which roles you need and the number of people required for each role. You can request waiters, waitresses, bartenders, baristas, cashiers, stewards, housekeeping staff, supervisors, managers or hostesses. Mention whether you need one team for a single shift or different headcounts across several dates.',
+                  },
+                  {
+                    title: 'Location and schedule',
+                    body: 'Include the venue or worksite address, assignment dates, shift start and finish times, and any preparation or briefing time. Let us know whether the request is for a one-off event, several shifts or project-based support so the proposed schedule can be discussed clearly.',
+                  },
+                  {
+                    title: 'Tasks and presentation',
+                    body: 'Describe the main responsibilities and the setting where the team will work, such as a hotel, restaurant, cafe, reception or event venue. Share any relevant uniform, grooming, language or experience requirements, along with the service standards and site instructions that personnel need to follow.',
+                  },
+                  {
+                    title: 'Site access and coordination',
+                    body: 'Provide the name and contact details of the person coordinating the assignment. Include the reporting point, access arrangements and any site-specific safety or hygiene instructions. We will discuss availability, rates, schedules and applicable terms with you; deployments require written confirmation before they are treated as agreed.',
+                  },
+                ].map((item) => (
+                  <article key={item.title} className="rounded-2xl border border-[#e2d7cb] bg-white p-6">
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#5c554f]">{item.body}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
           </Container>
         </section>
       </main>

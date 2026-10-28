@@ -19,6 +19,7 @@ export default function PortfolioPage() {
         <section className="py-20">
           <Container>
             <SectionHeading
+              as="h1"
               eyebrow="Staffing Capacity"
               title="Role-by-role deployment capacity"
               description="The figures below are the requested minimum and maximum deployment capacity per role. Actual deployment depends on availability, advance notice, shift schedules, venue access, and role requirements."

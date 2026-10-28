@@ -20,11 +20,13 @@ export default function AboutPage() {
         <section className="py-20">
           <Container>
             <SectionHeading
+              as="h1"
               eyebrow="About"
               title={site.about.title}
               description={site.about.body}
             />
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <h2 className="mt-12 text-2xl font-semibold">Our service commitments</h2>
+            <div className="mt-6 grid gap-6 lg:grid-cols-3">
               {site.about.values.map((value) => (
                 <Reveal key={value.title}>
                   <div className="rounded-3xl border border-[#e2d7cb] bg-white p-6 shadow-[0_16px_40px_rgba(30,27,24,0.08)]">
@@ -36,11 +38,11 @@ export default function AboutPage() {
             </div>
             <div className="mt-16 grid gap-6 lg:grid-cols-2">
               <section className="rounded-3xl border border-[#e2d7cb] bg-[#1e1b18] p-8 text-[#f7f4f0]">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Our Vision</p>
+                <h2 className="text-xs uppercase tracking-[0.3em] !text-[#b08a5a]">Our Vision</h2>
                 <p className="mt-4 text-lg">{site.about.vision}</p>
               </section>
               <section className="rounded-3xl border border-[#e2d7cb] bg-white p-8">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Our Mission</p>
+                <h2 className="text-xs uppercase tracking-[0.3em] !text-[#b08a5a]">Our Mission</h2>
                 <ul className="mt-4 list-disc space-y-3 pl-5 text-sm text-[#5c554f]">
                   {site.about.mission.map((statement) => (
                     <li key={statement}>{statement}</li>

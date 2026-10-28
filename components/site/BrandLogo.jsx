@@ -5,7 +5,7 @@ export default function BrandLogo({ className = '', compact = false }) {
     <span className={`inline-flex items-center gap-3 ${className}`.trim()}>
       <img
         src="/mai-manzil-logo.svg"
-        alt=""
+        alt={`${site.brand.name} logo`}
         width="100"
         height="84"
         className={`${compact ? 'h-9 sm:h-10' : 'h-11 sm:h-12'} w-auto shrink-0`}
