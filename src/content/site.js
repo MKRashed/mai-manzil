@@ -1,277 +1,212 @@
 ﻿export const site = {
   brand: {
     name: 'Mai Manzil',
-    domain: 'maimanzil.com',
-    title: 'Mai Manzil — Event Worker Supply (Dubai)',
-    tagline: 'Reliable event staffing, on demand',
-    description:
-      'Mai Manzil is a Dubai, UAE–based event worker supply company. We provide trained crews for weddings, corporate programs, exhibitions, and private gatherings—covering setup, service, logistics, venue support, and cleanup so events run smoothly and professionally.',
+    legalName: 'Mai Manzil L.L.C-FZ',
+    domain: 'www.maimanzil.com',
+    title: 'Mai Manzil | On-Demand Manpower Supply in Dubai',
+    tagline: 'On-demand manpower. Professional people. Reliable service.',
+    footerDescription: 'On-demand staff for hospitality, housekeeping and events in Dubai. The right people, when you need them.',
   },
 
   nav: [
     { label: 'Home', href: '/' },
-    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Staffing Capacity', href: '/portfolio' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ],
 
   ctas: {
-    primary: { label: 'Book a Consultation', href: '/contact' },
-    secondary: { label: 'View Portfolio', href: '/portfolio' },
+    primary: { label: 'Request Staff', href: '/contact' },
+    secondary: { label: 'View Staffing Capacity', href: '/portfolio' },
   },
 
   hero: {
-    headline: 'Event worker supply for seamless execution in Dubai.',
+    mobileHeadline: 'Your team,',
+    mobileHeadlineAccent: 'on demand.',
+    mobileSubhead: 'Hospitality. Housekeeping. Events.',
+    headline: 'On-demand manpower supply for your business in Dubai.',
     subhead:
-      'Trained, professional crews for setup, service, logistics, and cleanup—ready for weddings, corporate events, conferences, and private celebrations across the UAE.',
-    image: '/hero-dubai.jpg',
-    badges: ['Dubai-based', 'UAE-wide coverage', 'Trained supervisors', 'On-demand deployment'],
+      'Flexible staffing for hospitality, housekeeping, events, and operational needs. Request the roles and headcount you need, when you need them.',
+    badges: ['On-demand staffing', 'Hospitality roles', 'Housekeeping teams', 'Event manpower'],
   },
   heroSlides: [
-    { image: '/hero-dubai.jpg', alt: 'Premium event staffing at a city skyline venue.' },
-    { image: '/luxury-event-dubai.jpg', alt: 'Luxury gala with professional service crew.' },
-    { image: '/portfolio-weddings.jpg', alt: 'Wedding reception with full service staffing.' },
-    { image: '/portfolio-corporate.jpg', alt: 'Corporate event with coordinated staff.' },
-  ],
-
-  services: [
-
-    {
-      title: 'Waiter & Waitresses',
-      description: 'Table service, tray service, and banquet floor staffing.',
-      icon: '🍽️',
-      image: '/waiter-team-photo.png',
-    },
-   
-    {
-      title: 'Bartender & Barback',
-      description: 'Beverage teams for bars, and drink service flow.',
-      icon: '🍸',
-      image: '/barmen-barback.png',
-    },
-    {
-      title: 'Baristas',
-      description: 'Beverage teams for coffee stations, and drink service flow.',
-      icon: '🍸',
-      image: '/baristas.png',
-    },
-    {
-      title: 'Host & Hostess',
-      description: 'Front-of-house greeting, guest guidance, and entry coordination.',
-      icon: '🎟️',
-      image: '/host-hostess.png',
-    },
-    {
-      title: 'Cashier & Order Taker',
-      description: 'Order taking, POS handling, queue control, and guest support.',
-      icon: '🧾',
-      image: '/cashier-order-taker.png',
-    },
-
-    {
-      title: 'Cleaner & Hygiene Support',
-      description: 'Event cleaning crew for before, during, and after service hygiene.',
-      icon: '🧼',
-      image: '/portfolio-6-cleaning.jpg',
-    },
-    
+    { image: '/hero-dubai.jpg', alt: 'A Dubai venue prepared for hospitality services.' },
+    { image: '/luxury-event-dubai.jpg', alt: 'A formal venue prepared for an event.' },
+    { image: '/portfolio-weddings.jpg', alt: 'A wedding reception venue.' },
+    { image: '/portfolio-corporate.jpg', alt: 'A corporate event venue.' },
   ],
 
   featuredWork: [
     {
-      title: 'Grand Wedding Crew',
-      category: 'Wedding Staffing',
-      year: '2024',
-      image: '/portfolio-weddings.jpg',
-    },
-    {
-      title: 'Corporate Summit Team',
-      category: 'Corporate Staffing',
-      year: '2023',
+      title: 'Hospitality & Event Staffing',
+      category: 'On-demand hospitality manpower',
+      description: 'Waiters, waitresses, bartenders, baristas, and hostesses for catering, venues, and events.',
       image: '/portfolio-corporate.jpg',
     },
     {
-      title: 'Cultural Festival Support',
-      category: 'Cultural Staffing',
-      year: '2024',
-      image: '/portfolio-hospitality.jpg',
+      title: 'Housekeeping & Stewarding',
+      category: 'Housekeeping manpower',
+      description: 'Personnel for room care, public-area cleaning, event spaces, and back-of-house support.',
+      image: '/portfolio-6-cleaning.jpg',
     },
     {
-      title: 'Private Gala Crew',
-      category: 'Private Staffing',
-      year: '2022',
-      image: '/portfolio-decor.jpg',
-    },
-    {
-      title: 'Brand Activation Team',
-      category: 'Brand Staffing',
-      year: '2023',
-      image: '/portfolio-venue.jpg',
+      title: 'Guest Reception & Supervision',
+      category: 'Event & operational staffing',
+      description: 'Hostesses, supervisors, and managers to support guest reception and team coordination.',
+      image: '/host-hostess.png',
     },
   ],
 
   gallery: [
-    { image: '/hero-dubai.jpg', alt: 'Elegant tablescape with candlelight.' },
-    { image: '/luxury-event-dubai.jpg', alt: 'Floral archway with soft lighting.' },
-    { image: '/portfolio-1-weddings.jpg', alt: 'Luxury reception hall in neutral tones.' },
-    { image: '/portfolio-2-corporate.jpg', alt: 'Corporate hall setup with stage and seating.' },
-    { image: '/portfolio-3-hospitality.jpg', alt: 'Hospitality crew and service setup detail.' },
-    { image: '/portfolio-4-decor.jpg', alt: 'Gala stage and lighting design.' },
-    { image: '/portfolio-5-venues.jpg', alt: 'Outdoor ceremony setup with draping.' },
-    { image: '/portfolio-6-cleaning.jpg', alt: 'Venue reset and finishing touches.' },
+    { image: '/hero-dubai.jpg', title: 'Hospitality in Dubai', alt: 'Hospitality setting in Dubai' },
+    { image: '/luxury-event-dubai.jpg', title: 'Event hospitality', alt: 'Event venue prepared for hospitality service' },
+    { image: '/portfolio-1-weddings.jpg', title: 'Wedding receptions', alt: 'Wedding venue supported by event staff' },
+    { image: '/portfolio-2-corporate.jpg', title: 'Corporate events', alt: 'Corporate venue setup' },
+    { image: '/portfolio-3-hospitality.jpg', title: 'Hospitality teams', alt: 'Hospitality service setting' },
+    { image: '/portfolio-6-cleaning.jpg', title: 'Housekeeping', alt: 'Housekeeping and venue cleaning' },
+  ],
+
+  services: [
+    {
+      title: 'Waiters & Waitresses',
+      description: 'Table service, guest assistance, food running, and banquet support.',
+      icon: 'utensils',
+      category: "Hospitality",
+      highlights: ["Table and banquet service","Guest assistance and food running"],
+    },
+    {
+      title: 'Bartenders',
+      description: 'Beverage preparation, bar service, bar-area upkeep, and applicable hygiene and responsible-service procedures.',
+      icon: 'martini',
+      category: "Hospitality",
+      highlights: ["Beverage preparation and service","Bar upkeep and hygiene"],
+    },
+    {
+      title: 'Baristas',
+      description: 'Coffee and beverage preparation, counter service, and cafe support.',
+      icon: 'coffee',
+      category: "Hospitality",
+      highlights: ["Coffee and beverage preparation","Counter service and cafe support"],
+    },
+    {
+      title: 'Cashiers',
+      description: 'POS transactions, payment handling, receipts, and end-of-shift procedures defined by the client.',
+      icon: 'receipt',
+      category: "Operations",
+      highlights: ["POS and payment handling","Receipts and shift procedures"],
+    },
+    {
+      title: 'Stewards',
+      description: 'Dishwashing, kitchen cleanliness, equipment handling, and back-of-house support.',
+      icon: 'cookingPot',
+      category: "Kitchen support",
+      highlights: ["Dishwashing and kitchen hygiene","Equipment and back-of-house support"],
+    },
+    {
+      title: 'Housekeeping',
+      description: 'Cleaning and sanitising, bed-making, supply replenishment, waste handling, and reporting maintenance or safety concerns.',
+      icon: 'sparkles',
+      category: "Facilities",
+      highlights: ["Room and public-area cleaning","Supply replenishment and upkeep"],
+    },
+    {
+      title: 'Supervisors & Managers',
+      description: 'Team briefings, attendance checks, task allocation, client coordination, and service monitoring.',
+      icon: 'clipboardCheck',
+      category: "Operations",
+      highlights: ["Briefings and task allocation","Attendance and client coordination"],
+    },
+    {
+      title: 'Hostesses',
+      description: 'Guest greeting, registration support, seating coordination, and queue guidance.',
+      icon: 'userRoundCheck',
+      category: "Guest services",
+      highlights: ["Guest greeting and registration","Seating and queue guidance"],
+    },
+  ],
+
+  businessAreas: [
+    {
+      title: 'Hospitality manpower',
+      description:
+        'On-demand personnel for hotels, restaurants, cafes, banquets, catering companies, exhibitions, conferences, weddings, concerts, and corporate events.',
+    },
+    {
+      title: 'Housekeeping manpower',
+      description:
+        'Housekeeping staff for guest rooms, public areas, offices, event spaces, and back-of-house areas, based on your schedule and staffing requirements.',
+    },
+    {
+      title: 'Event & operational staffing',
+      description:
+        'Temporary and project-based staff deployed for operational peaks and events, based on availability and an agreed staffing plan.',
+    },
   ],
 
   process: [
     {
-      step: 'Assess',
-      description: 'We review your event type, guest count, timelines, and staffing requirements.',
+      step: 'Plan',
+      description: 'We confirm role profiles, headcount, location, shift times, reporting points, and site instructions.',
     },
     {
-      step: 'Deploy',
-      description: 'We assign trained workers and supervisors matched to your event scope and venue.',
+      step: 'Coordinate',
+      description: 'We align the staffing plan with availability, venue requirements, and agreed terms.',
     },
     {
-      step: 'Execute',
-      description: 'On-site leads manage discipline, task flow, and service quality throughout the event.',
+      step: 'Support',
+      description: 'Team leads can coordinate briefings, attendance, task allocation, and service standards on site.',
     },
     {
-      step: 'Wrap',
-      description: 'We handle cleanup, reset, and close-out tasks with clear accountability.',
+      step: 'Review',
+      description: 'We communicate operational changes and service concerns through the designated client contacts.',
     },
   ],
 
-  testimonials: [
-    {
-      quote:
-        'The team was professional and disciplined. Our wedding ran smoothly from start to finish.',
-      name: 'Sadia R.',
-      role: 'Wedding Client',
-      rating: 5,
-    },
-    {
-      quote:
-        'Reliable crew and clear supervision. Our corporate program was executed perfectly.',
-      name: 'Arif H.',
-      role: 'Event Manager',
-      rating: 5,
-    },
-    {
-      quote:
-        'On-time, well-trained, and respectful staff. We will book again for future events.',
-      name: 'Nabila S.',
-      role: 'Private Client',
-      rating: 5,
-    },
-  ],
-
-  stats: [
-    { value: '500+', label: 'Events Supported' },
-    { value: '1,200+', label: 'Workers Deployed' },
-    { value: '98%', label: 'Client Retention' },
-    { value: '8', label: 'Years in Staffing' },
-  ],
-  statsSection: {
-    eyebrow: 'Highlights',
-    title: 'Trusted across the UAE and beyond',
-    description: 'Built on disciplined staffing and long-term client partnerships.',
-  },
-
-  clients: ['Ardor Studio', 'Lumina Hotels', 'Citrine Labs', 'Maison Verity', 'Monarch Group'],
-  venues: ['The Orchid Villa', 'Skyline Pavilion', 'The Atrium', 'Lotus Courtyard'],
-
-  portfolio: [
-    {
-      title: 'Aurora Wedding Crew',
-      category: 'Wedding Staffing',
-      year: '2024',
-      image: '/portfolio-weddings.jpg',
-      description: 'A full-service crew for a 600-guest wedding with service and floor support.',
-    },
-    {
-      title: 'Nexus Summit Team',
-      category: 'Corporate Staffing',
-      year: '2023',
-      image: '/portfolio-corporate.jpg',
-      description: 'Conference support team covering registration, ushering, and floor operations.',
-    },
-    {
-      title: 'Heritage Night Support',
-      category: 'Cultural Staffing',
-      year: '2024',
-      image: '/portfolio-hospitality.jpg',
-      description: 'Festival crew managing guest flow, service points, and cleanup coordination.',
-    },
-    {
-      title: 'Gallery Affair Crew',
-      category: 'Private Staffing',
-      year: '2022',
-      image: '/portfolio-decor.jpg',
-      description: 'Discreet service team for a private dinner event with VIP handling support.',
-    },
-    {
-      title: 'Aurelia Launch Team',
-      category: 'Brand Staffing',
-      year: '2023',
-      image: '/portfolio-venue.jpg',
-      description: 'Brand activation crew for guest handling, logistics, and back-of-house support.',
-    },
-    {
-      title: 'Marigold Union Staff',
-      category: 'Wedding Staffing',
-      year: '2023',
-      image: '/portfolio-1-weddings.jpg',
-      description: 'Large wedding staffing with stage support, service crew, and cleanup.',
-    },
-    {
-      title: 'Celeste Boardroom Team',
-      category: 'Corporate Staffing',
-      year: '2022',
-      image: '/portfolio-2-corporate.jpg',
-      description: 'Executive retreat staffing with protocol support and session changeovers.',
-    },
-    {
-      title: 'Saffron Moon Crew',
-      category: 'Cultural Staffing',
-      year: '2024',
-      image: '/portfolio-3-hospitality.jpg',
-      description: 'Cultural night staffing with crowd flow management and venue reset.',
-    },
+  staffingCapacity: [
+    { role: 'Waiter', minimum: 5, maximum: 150, responsibilities: 'Table service, guest assistance, food running, and banquet support.' },
+    { role: 'Waitress', minimum: 5, maximum: 100, responsibilities: 'Table service, guest assistance, food running, and banquet support.' },
+    { role: 'Barista', minimum: 5, maximum: 25, responsibilities: 'Coffee and beverage preparation, counter service, and cafe operations.' },
+    { role: 'Bartender', minimum: 5, maximum: 20, responsibilities: 'Beverage preparation, bar service, and bar-area upkeep.' },
+    { role: 'Cashier', minimum: 5, maximum: 15, responsibilities: 'POS operation, payment handling, and transaction support.' },
+    { role: 'Steward', minimum: 5, maximum: 50, responsibilities: 'Dishwashing, kitchen hygiene, equipment, and back-of-house support.' },
+    { role: 'Housekeeping', minimum: 5, maximum: 200, responsibilities: 'Room, public-area, and event-space cleaning and upkeep.' },
   ],
 
   about: {
-    title: 'The Mai Manzil staffing approach',
+    title: 'Your on-demand manpower supply partner',
     body:
-      'Mai Manzil is an event worker supply partner based in Dubai, UAE. We provide trained crews who understand hospitality, timing, and disciplined execution. Our on-site supervisors keep tasks clear and coordinated—so your event stays smooth from setup to cleanup.',
+      'Mai Manzil L.L.C-FZ is a Dubai-based on-demand manpower supply company providing personnel for hospitality, housekeeping, events, and day-to-day operations. We support hotels, restaurants, cafes, catering companies, exhibitions, venues, and corporate functions. Each staffing request is planned around the roles, headcount, schedule, site requirements, availability, and terms agreed with the client.',
+    vision:
+      'To be a trusted hospitality and facilities-support partner in the UAE, recognised for dependable staffing, professional conduct, service quality, and long-term client relationships.',
+    mission: [
+      'Provide capable, presentable, and service-focused personnel for hospitality, housekeeping, and event operations.',
+      'Match staffing plans to client needs, service standards, and agreed timelines.',
+      'Promote guest satisfaction, workplace safety, teamwork, and respectful communication.',
+      'Build lasting partnerships through transparent coordination, responsive support, and continuous improvement.',
+    ],
     values: [
       {
-        title: 'Trained workforce',
-        description: 'Workers are briefed, uniform-ready, and prepared for service standards required by venues.',
+        title: 'Professional presentation',
+        description: 'We communicate the grooming, uniform, and conduct expectations relevant to each client and venue.',
       },
       {
-        title: 'On-site supervision',
-        description: 'Team leads manage workflow, quality checks, and real-time coordination with your point-of-contact.',
+        title: 'Safety & hygiene',
+        description: 'Personnel follow applicable site rules, food-safety practices, housekeeping procedures, and health-and-safety instructions.',
       },
       {
-        title: 'Reliable delivery',
-        description: 'On-time arrival, consistent performance, and clean wrap-up—designed for repeat bookings.',
+        title: 'Responsive coordination',
+        description: 'Designated contacts coordinate attendance, schedule changes, shortages, incidents, and service concerns.',
       },
     ],
   },
 
   contact: {
-    phone: '+971501199583\n+971555569301',
-    whatsapp: 'https://wa.me/971000000000',
+    phone: '050 119 9583\n055 556 9301',
     email: 'info@maimanzil.com',
-    location: 'Dubai, United Arab Emirates',
-    hours: 'Sun–Thu: 9:00 AM – 7:00 PM',
-    headline: 'Let’s staff your next event',
-    description: 'Share your requirements and our team will respond with a tailored crew plan.',
-    cardNote: 'Prefer a quick start? Use our full contact form and we will follow up within two business days.',
-    ctaLabel: 'Go to Contact',
-    socials: [
-      { label: 'Facebook', href: 'https://facebook.com' },
-      { label: 'Instagram', href: 'https://instagram.com' },
-      { label: 'YouTube', href: 'https://youtube.com' },
-    ],
+    location: 'Meydan Grandstand, 6th Floor, Nad Al Sheba, Dubai, UAE',
+    headline: 'Tell us about your staffing requirements',
+    description: 'Share the roles, headcount, location, dates, shift hours, and responsibilities you need. We will coordinate availability and an appropriate staffing plan.',
+    cardNote: 'Deployments are confirmed after the staffing request, availability, rates, schedule, and applicable terms have been agreed in writing.',
+    ctaLabel: 'Contact Mai Manzil',
   },
 };

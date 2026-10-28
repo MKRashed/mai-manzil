@@ -8,9 +8,9 @@ export default function CTABand() {
       <Container className="py-16">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Ready to begin</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Staffing enquiries</p>
             <h2 className="mt-4 text-3xl sm:text-4xl font-semibold !text-[#f7f4f0]">
-              Let’s plan something unforgettable.
+              Tell us what your operation needs.
             </h2>
           </div>
           <Link

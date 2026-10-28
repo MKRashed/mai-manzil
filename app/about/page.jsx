@@ -4,6 +4,13 @@ import Footer from '@/components/site/Footer'
 import Container from '@/components/site/Container'
 import SectionHeading from '@/components/site/SectionHeading'
 import Reveal from '@/components/site/Reveal'
+import { createPageMetadata } from '@/src/content/seo'
+
+export const metadata = createPageMetadata({
+  title: 'About Mai Manzil | Manpower Supply in Dubai',
+  description: 'Meet Mai Manzil, your Dubai manpower supply partner for hospitality, housekeeping and events, with staffing planned around your operational needs.',
+  path: '/about/',
+})
 
 export default function AboutPage() {
   return (
@@ -27,13 +34,19 @@ export default function AboutPage() {
                 </Reveal>
               ))}
             </div>
-            <div className="mt-16 rounded-3xl border border-[#e2d7cb] bg-[#1e1b18] p-10 text-[#f7f4f0]">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Our Promise</p>
-              <h2 className="mt-4 text-3xl font-semibold">Quiet confidence. Elevated details.</h2>
-              <p className="mt-4 text-sm text-[#e0d6cb]">
-                We guide each event with meticulous planning, thoughtful design, and a calm presence on the day-of. Our
-                team is structured for premium results, ensuring every guest experience feels seamless and bespoke.
-              </p>
+            <div className="mt-16 grid gap-6 lg:grid-cols-2">
+              <section className="rounded-3xl border border-[#e2d7cb] bg-[#1e1b18] p-8 text-[#f7f4f0]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Our Vision</p>
+                <p className="mt-4 text-lg">{site.about.vision}</p>
+              </section>
+              <section className="rounded-3xl border border-[#e2d7cb] bg-white p-8">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Our Mission</p>
+                <ul className="mt-4 list-disc space-y-3 pl-5 text-sm text-[#5c554f]">
+                  {site.about.mission.map((statement) => (
+                    <li key={statement}>{statement}</li>
+                  ))}
+                </ul>
+              </section>
             </div>
           </Container>
         </section>

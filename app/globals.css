@@ -1,16 +1,10 @@
 ﻿@import 'tailwindcss';
-@import 'tw-animate-css';
 
 :root {
   --surface: #f7f4f0;
-  --surface-muted: #f0ebe5;
   --ink: #1e1b18;
-  --ink-soft: #5c554f;
   --accent: #b08a5a;
-  --accent-soft: #dcc3a0;
   --border: #e2d7cb;
-  --shadow: 0 20px 60px rgba(30, 27, 24, 0.12);
-  --radius: 1.25rem;
 }
 
 html {
@@ -57,8 +51,91 @@ h6 {
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.site-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(30, 27, 24, 0.08);
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+.gallery-reveal {
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-card {
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-card-image {
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-card-icon {
+  transition: transform 300ms ease, background-color 300ms ease, border-color 300ms ease;
+}
+
+.gallery-card-title {
+  transition: color 280ms ease;
+}
+
+.gallery-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.gallery-card:active {
+  transform: scale(0.985);
+}
+
+@media (min-width: 640px) {
+  .gallery-reveal:nth-child(2n) { transition-delay: 80ms; }
+}
+
+@media (min-width: 1024px) {
+  .gallery-reveal:nth-child(3n + 1) { transition-delay: 0ms; }
+  .gallery-reveal:nth-child(3n + 2) { transition-delay: 80ms; }
+  .gallery-reveal:nth-child(3n) { transition-delay: 160ms; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-card:is(:hover, :focus-visible) {
+    transform: translateY(-6px);
+    border-color: #c9ab80;
+    box-shadow: 0 24px 48px rgba(30, 27, 24, 0.14);
   }
+  .gallery-card:is(:hover, :focus-visible) .gallery-card-image {
+    transform: scale(1.055);
+  }
+  .gallery-card:is(:hover, :focus-visible) .gallery-card-icon {
+    transform: rotate(-8deg) scale(1.08);
+    background-color: #edcd93;
+    border-color: #d1ad72;
+  }
+  .gallery-card:is(:hover, :focus-visible) .gallery-card-title {
+    color: #795b35;
+  }
+  .gallery-card:active { transform: translateY(-2px) scale(0.985); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { transition: none; transform: none; }
+  .reveal { opacity: 1; }
+  .gallery-reveal, .gallery-card, .gallery-card-image, .gallery-card-icon, .gallery-card-title {
+    transition: none;
+    transition-delay: 0ms;
+  }
+  .gallery-card:is(:hover, :focus-visible, :active),
+  .gallery-card:is(:hover, :focus-visible) .gallery-card-image,
+  .gallery-card:is(:hover, :focus-visible) .gallery-card-icon {
+    transform: none;
+  }
+
 }

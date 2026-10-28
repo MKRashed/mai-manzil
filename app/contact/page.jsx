@@ -1,18 +1,25 @@
 ﻿'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { site } from '@/src/content/site'
 import Navbar from '@/components/site/Navbar'
 import Footer from '@/components/site/Footer'
 import Container from '@/components/site/Container'
 import SectionHeading from '@/components/site/SectionHeading'
 
-const initialState = { name: '', email: '', message: '' }
+const initialState = { role: '', name: '', email: '', message: '' }
 
 export default function ContactPage() {
   const [form, setForm] = useState(initialState)
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    const requestedRole = new URLSearchParams(window.location.search).get('role')
+    if (site.services.some((service) => service.title === requestedRole)) {
+      setForm((current) => ({ ...current, role: requestedRole }))
+    }
+  }, [])
 
   const validate = () => {
     const nextErrors = {}
@@ -27,8 +34,8 @@ export default function ContactPage() {
     event.preventDefault()
     if (!validate()) return
 
-    const subject = encodeURIComponent('Event Inquiry — Mai Manzil')
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
+    const subject = encodeURIComponent('Staffing Inquiry — Mai Manzil')
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}${form.role ? `\nService: ${form.role}` : ''}\n\n${form.message}`)
     window.location.href = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
     setSubmitted(true)
     setForm(initialState)
@@ -44,69 +51,89 @@ export default function ContactPage() {
               <div>
                 <SectionHeading
                   eyebrow="Contact"
-                  title="Start your consultation"
-                  description="Tell us about your event, your guest count, and the atmosphere you want to create."
+                  title="Discuss your staffing requirements"
+                  description="Share the roles, headcount, location, dates, shift hours, and responsibilities required for your assignment."
                 />
                 <div className="mt-8 space-y-4 text-sm text-[#5c554f]">
+                  <p>{site.brand.legalName}</p>
                   <p>{site.contact.location}</p>
-                  <p>{site.contact.phone}</p>
-                  <p>{site.contact.email}</p>
-                  <div className="flex flex-wrap gap-4">
-                    {site.contact.socials.map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]"
-                      >
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
+                  <p className="whitespace-pre-line">{site.contact.phone}</p>
+                  <a className="inline-block text-[#b08a5a]" href={`mailto:${site.contact.email}`}>
+                    {site.contact.email}
+                  </a>
                 </div>
                 <div className="mt-10 rounded-3xl border border-[#e2d7cb] bg-white p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Optional</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#b08a5a]">Staffing request</p>
                   <p className="mt-3 text-sm text-[#5c554f]">
-                    Prefer a hosted form? Replace the form action with Formspree or Netlify Forms when you launch.
+                    Deployments depend on availability, assignment requirements, and written confirmation of the applicable schedule and terms.
                   </p>
                 </div>
               </div>
 
               <form
+                id="staffing-form"
                 onSubmit={handleSubmit}
-                className="rounded-3xl border border-[#e2d7cb] bg-white p-8 shadow-[0_18px_50px_rgba(30,27,24,0.1)]"
+                className="scroll-mt-24 rounded-3xl border border-[#e2d7cb] bg-white p-6 shadow-[0_18px_50px_rgba(30,27,24,0.1)] sm:p-8"
               >
                 <div className="space-y-6">
                   <div>
-                    <label className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Name</label>
+                    <label htmlFor="staffing-role" className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Service</label>
+                    <select
+                      id="staffing-role"
+                      name="role"
+                      value={form.role}
+                      onChange={(event) => setForm({ ...form, role: event.target.value })}
+                      className="mt-3 min-h-11 w-full rounded-2xl border border-[#e2d7cb] bg-[#f7f4f0] px-4 py-3 text-sm"
+                    >
+                      <option value="">Select a service (optional)</option>
+                      {site.services.map((service) => (
+                        <option key={service.title} value={service.title}>{service.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="staffing-name" className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Name</label>
                     <input
+                      id="staffing-name"
+                      name="name"
+                      autoComplete="name"
+                      aria-invalid={Boolean(errors.name)}
+                      aria-describedby={errors.name ? 'staffing-name-error' : undefined}
                       type="text"
                       value={form.name}
                       onChange={(event) => setForm({ ...form, name: event.target.value })}
                       className="mt-3 w-full rounded-2xl border border-[#e2d7cb] bg-[#f7f4f0] px-4 py-3 text-sm"
                     />
-                    {errors.name ? <p className="mt-2 text-xs text-[#b04b3e]">{errors.name}</p> : null}
+                    {errors.name ? <p id="staffing-name-error" className="mt-2 text-xs text-[#b04b3e]">{errors.name}</p> : null}
                   </div>
                   <div>
-                    <label className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Email</label>
+                    <label htmlFor="staffing-email" className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Email</label>
                     <input
+                      id="staffing-email"
+                      name="email"
+                      autoComplete="email"
+                      aria-invalid={Boolean(errors.email)}
+                      aria-describedby={errors.email ? 'staffing-email-error' : undefined}
                       type="email"
                       value={form.email}
                       onChange={(event) => setForm({ ...form, email: event.target.value })}
                       className="mt-3 w-full rounded-2xl border border-[#e2d7cb] bg-[#f7f4f0] px-4 py-3 text-sm"
                     />
-                    {errors.email ? <p className="mt-2 text-xs text-[#b04b3e]">{errors.email}</p> : null}
+                    {errors.email ? <p id="staffing-email-error" className="mt-2 text-xs text-[#b04b3e]">{errors.email}</p> : null}
                   </div>
                   <div>
-                    <label className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Message</label>
+                    <label htmlFor="staffing-message" className="text-xs uppercase tracking-[0.3em] text-[#5c554f]">Message</label>
                     <textarea
+                      id="staffing-message"
+                      name="message"
+                      aria-invalid={Boolean(errors.message)}
+                      aria-describedby={errors.message ? 'staffing-message-error' : undefined}
                       rows={6}
                       value={form.message}
                       onChange={(event) => setForm({ ...form, message: event.target.value })}
                       className="mt-3 w-full rounded-2xl border border-[#e2d7cb] bg-[#f7f4f0] px-4 py-3 text-sm"
                     />
-                    {errors.message ? <p className="mt-2 text-xs text-[#b04b3e]">{errors.message}</p> : null}
+                    {errors.message ? <p id="staffing-message-error" className="mt-2 text-xs text-[#b04b3e]">{errors.message}</p> : null}
                   </div>
                 </div>
                 <button
