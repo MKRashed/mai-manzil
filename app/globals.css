@@ -31,6 +31,88 @@ h6 {
   background: rgba(176, 138, 90, 0.25);
 }
 
+.page-eyebrow {
+  color: #795b35;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.enquiry-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.enquiry-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  margin-top: 9px;
+  border: 1px solid #ded7cd;
+  border-radius: 10px;
+  background: #fcfaf7;
+  padding: 12px 14px;
+  color: #1e1b18;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.enquiry-input::placeholder { color: #82776b; }
+.enquiry-input:hover { border-color: #bba88f; }
+.enquiry-input:focus {
+  outline: none;
+  border-color: #896439;
+  box-shadow: 0 0 0 3px #b08a5a22;
+}
+.enquiry-input[aria-invalid='true'] { border-color: #b04b3e; }
+
+.enquiry-button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 999px;
+  background: #28251f;
+  padding: 14px 25px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 160ms ease;
+}
+.enquiry-button:hover { background: #795b35; }
+.enquiry-button:focus-visible { outline: 2px solid #896439; outline-offset: 4px; }
+.enquiry-button:disabled { cursor: wait; opacity: 0.65; }
+.contact-detail { display: flex; align-items: flex-start; gap: 16px; padding: 24px 0; }
+.compact-enquiry .enquiry-input { margin-top: 6px; padding-top: 10px; padding-bottom: 10px; }
+.contact-sidebar .contact-detail { gap: 12px; padding: 16px 0; }
+.contact-sidebar .contact-icon { width: 36px; height: 36px; }
+.contact-icon {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddcfbb;
+  border-radius: 50%;
+  color: #896439;
+}
+
+@media (max-width: 639px) {
+  .enquiry-input { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enquiry-input, .enquiry-button { transition: none; }
+  .animate-spin { animation: none; }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
