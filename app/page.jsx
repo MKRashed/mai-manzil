@@ -33,7 +33,7 @@ export default function HomePage() {
           <Container>
             <SectionHeading
               eyebrow="Services"
-              title="On-demand staff for hospitality, housekeeping & events"
+              title="On-demand manpower supply for Hospitality, Housekeeping and Events"
               description="Request the roles and team size your operation needs, with staffing planned around your schedule and site requirements."
             />
             <div className="mt-12">

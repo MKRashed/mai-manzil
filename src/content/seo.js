@@ -40,7 +40,7 @@ export const businessJsonLd = {
   image: `${siteUrl}/hero-dubai.jpg`,
   logo: `${siteUrl}/mai-manzil-logo.svg`,
   email: site.contact.email,
-  telephone: site.contact.phone.split('\n').map((phone) => `+971${phone.replace(/\D/g, '').replace(/^0/, '')}`),
+  telephone: site.contact.phone.split('\n'),
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Meydan Grandstand, 6th Floor, Nad Al Sheba',

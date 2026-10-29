@@ -57,7 +57,7 @@ export default function Footer() {
                   {site.contact.phone.split('\n').map((phone) => (
                     <a
                       key={phone}
-                      href={`tel:+971${phone.replace(/\D/g, '').replace(/^0/, '')}`}
+                      href={`tel:${phone}`}
                       className="inline-flex min-h-11 items-center rounded-lg whitespace-nowrap transition-colors hover:text-[#795b35]"
                     >
                       {phone}

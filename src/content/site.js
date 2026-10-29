@@ -5,7 +5,7 @@
     domain: 'www.maimanzil.com',
     title: 'Mai Manzil | On-Demand Manpower Supply in Dubai',
     tagline: 'On-demand manpower. Professional people. Reliable service.',
-    footerDescription: 'On-demand staff for hospitality, housekeeping and events in Dubai. The right people, when you need them.',
+    footerDescription: 'On-demand manpower for hospitality, housekeeping and events in Dubai. The right people, when you need them.',
   },
 
   nav: [
@@ -201,7 +201,7 @@
   },
 
   contact: {
-    phone: '050 119 9583\n055 556 9301',
+    phone: '+971501199583\n+971555569301',
     email: 'info@maimanzil.com',
     location: 'Meydan Grandstand, 6th Floor, Nad Al Sheba, Dubai, UAE',
     headline: 'Tell us about your staffing requirements',
