@@ -1,3 +1,4 @@
+import { deliveryFailure } from '../../../src/lib/contact-delivery.mjs'
 import { site } from '../../../src/content/site.js'
 import { inquiryText, validateInquiry } from '../../../src/lib/contact.mjs'
 
@@ -42,21 +43,26 @@ export async function POST(request) {
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        Authorization: `Bearer ${process.env.RESEND_API_KEY.trim()}`,
         'Content-Type': 'application/json',
         ...(id && /^[a-f0-9-]{36}$/i.test(id) ? { 'Idempotency-Key': `contact-${id}` } : {}),
       },
       body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL,
-        to: [process.env.CONTACT_TO_EMAIL || site.contact.email],
+        from: process.env.CONTACT_FROM_EMAIL.trim(),
+        to: [(process.env.CONTACT_TO_EMAIL || site.contact.email).trim()],
         reply_to: data.email,
         subject: `Staffing enquiry${data.role ? ` — ${data.role}` : ''}`,
         text: inquiryText(data),
       }),
       signal: AbortSignal.timeout(12000),
     })
-    const result = await response.json()
-    if (!response.ok || !result.id) return reply({ error: 'We could not send your enquiry. Please try again or email us directly.' }, 502)
+    let result
+    try { result = await response.json() } catch { result = {} }
+    if (!response.ok || !result.id) {
+      const code = deliveryFailure(response.status, result)
+      console.error('[contact-delivery]', { code, providerStatus: response.status })
+      return reply({ error: 'We could not send your enquiry. Please try again or email us directly.', code }, 502)
+    }
     return reply({ success: true })
   } catch {
     return reply({ error: 'We could not confirm your enquiry. Please retry or contact us directly.' }, 502)
